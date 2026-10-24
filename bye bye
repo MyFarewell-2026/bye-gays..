@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One Last Message ❤️</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ffecd2,#fcb69f);
+    text-align:center;
+    padding:50px;
+}
+
+button{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    font-size:20px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+    font-size:24px;
+    line-height:1.8;
+    color:#333;
+}
+</style>
+</head>
+
+<body>
+
+<h1>✨ One Last Click Before I Go ✨</h1>
+
+<button onclick="showMessage()">
+❤️ Click Here ❤️
+</button>
+
+<div id="message">
+<p>
+Dear shitty shits, <br><br>
+
+Thank you for being part of my journey. ❤️<br>
+
+I will miss the chaos we made and the laughter for silly things... ✨<br><br>
+
+It was fucking bore here before you guys ,and thnak you for making me happy and laugh even the busy days . <br><br>
+
+Dont make urself lower to anyone ,and keep going and work hard and also send me money every month coz starting tomorrow I will be unnemployed. 🚀💐<br><br>
+
+Thank you for everything. ❤️<br><br>
+
+With gratitude,<br>
+<b>yours lovely silpaaa🌹</b>
+</p>
+</div>
+
+<script>
+function showMessage() {
+document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
