@@ -1,66 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>One Last Message ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Thank You From Silpa ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#ffecd2,#fcb69f);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#fff1eb,#ace0f9);
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    padding:20px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
     text-align:center;
-    padding:50px;
+}
+
+h1{
+    color:#444;
+    margin-bottom:30px;
 }
 
 button{
     background:#ff4d6d;
     color:white;
     border:none;
-    padding:15px 25px;
-    font-size:20px;
-    border-radius:25px;
+    padding:18px 40px;
+    font-size:22px;
+    border-radius:50px;
     cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-#message{
+button:hover{
+    transform:scale(1.05);
+    background:#ff2e5f;
+}
+
+.card{
     display:none;
-    margin-top:30px;
-    font-size:24px;
+    margin-top:35px;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    animation:fadeIn 1.5s ease;
+}
+
+.message{
+    font-family:'Dancing Script',cursive;
+    font-size:32px;
     line-height:1.8;
     color:#333;
+}
+
+.signature{
+    margin-top:35px;
+    font-size:38px;
+    color:#ff4d6d;
+    font-family:'Dancing Script',cursive;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.heart{
+    position:fixed;
+    color:#ff4d6d;
+    animation:float 6s linear infinite;
+    opacity:0.4;
+    pointer-events:none;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+    }
+    to{
+        transform:translateY(-100px);
+    }
 }
 </style>
 </head>
 
 <body>
 
-<h1>✨ One Last Click Before I Go ✨</h1>
+<div class="container">
 
-<button onclick="showMessage()">
-❤️ Click Here ❤️
-</button>
+    <h1>✨ One Last Click Before I Go ✨</h1>
 
-<div id="message">
-<p>
-Dear shitty shits, <br><br>
+    <button onclick="showMessage()">
+        ❤️ Click Here ❤️
+    </button>
 
-Thank you for being part of my journey. ❤️<br>
+    <div class="card" id="msg">
 
-I will miss the chaos we made and the laughter for silly things... ✨<br><br>
+        <div class="message">
 
-It was fucking bore here before you guys ,and thnak you for making me happy and laugh even the busy days . <br><br>
+            Dear Shitty Shits, 😆❤️<br><br>
 
-Dont make urself lower to anyone ,and keep going and work hard and also send me money every month coz starting tomorrow I will be unnemployed. 🚀💐<br><br>
+            Thank you for being part of my journey. ❤️<br><br>
 
-Thank you for everything. ❤️<br><br>
+            I will miss all the chaos we created together and all the laughter over the silliest things. ✨<br><br>
 
-With gratitude,<br>
-<b>yours lovely silpaaa🌹</b>
-</p>
+            To be honest, it was pretty boring here before you guys came along. Thank you for making me laugh, keeping me sane, and making even the busiest days enjoyable. 🌸<br><br>
+
+            Never make yourself feel smaller for anyone. Keep going, keep learning, and keep working hard. 💪🚀<br><br>
+
+            Also, please send me money every month because from tomorrow I will officially be unemployed. 😂💸<br><br>
+
+            I don't really know how to explain how special all of you are to me. I genuinely loved the time we spent together. I have a lot more to say, but I'm too lazy to type all of it. 😌<br><br>
+
+            And no, I am not tired of any of the chaos you created. If you got tired of me, that's your problem, cuties. 😌❤️<br><br>
+
+            I know you'll miss me terribly. As for me... I won't miss you THAT much. (Okay, maybe a little. 🤏😂)<br><br>
+
+            One very important request: if any meter stops working or anything starts failing, nobody is allowed to say:<br><br>
+
+            ❌ "Silpa tested that..."<br>
+            ❌ "Silpa checked that..."<br><br>
+
+            Those statements are officially banned from today onwards. 🚫😂<br><br>
+
+            It is better to forget me... but please don't. ❤️<br><br>
+
+            Hopefully we'll meet again somewhere, someday. If there are any spelling mistakes or grammar mistakes in this message, I am absolutely not apologizing for them. This is more than enough effort from me. 😎<br><br>
+
+            Wish me a wonderful and prosperous period of unemployment. 😂❤️<br><br>
+
+            Thank you for everything. 🌷
+
+        </div>
+
+        <div class="signature">
+            With lots of love,<br>
+            Your lovely Silpaaa 🌹❤️
+        </div>
+
+    </div>
+
 </div>
 
 <script>
-function showMessage() {
-document.getElementById("message").style.display = "block";
+function showMessage(){
+    document.getElementById("msg").style.display="block";
+}
+
+for(let i=0;i<20;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"%";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    heart.style.animationDuration=(4+Math.random()*6)+"s";
+    document.body.appendChild(heart);
 }
 </script>
 
